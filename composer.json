@@ -1,0 +1,20 @@
+{
+    "name": "rtnatephp/laravel-file-content-updates",
+    "description": "Update Laravel CMS models via Markdown files with frontmatter",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "RTNatePHP\\LaravelFileContentUpdates\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nate",
+            "email": "nate@rtelectronix.com"
+        }
+    ],
+    "require": {
+        "laravel/laravel": "^8.0",
+        "spatie/yaml-front-matter": "^2.0"
+    }
+}
