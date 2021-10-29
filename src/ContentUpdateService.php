@@ -52,7 +52,7 @@ class ContentUpdateService implements ContentUpdates
 
     protected function getAppModelClasses(): array 
     {
-        $appFiles = collect(File::allFiles(app_path()));
+        $appFiles = collect(File::allFiles(base_path('app')));
 
         $appClasses = $appFiles->map( function ($item) 
             {
