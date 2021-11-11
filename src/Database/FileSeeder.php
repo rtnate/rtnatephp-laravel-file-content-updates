@@ -60,7 +60,7 @@ class FileSeeder
     protected function doSeeding(array $files)
     {
         foreach ($files as $file) {
-            $fileParsed = $this->updateService->parseFile($file);
+            $fileParsed = $this->updateService->parseFile($file, true);
             $model = new $this->modelClass;
             $model->loadFromFile($fileParsed);
             $model->save();

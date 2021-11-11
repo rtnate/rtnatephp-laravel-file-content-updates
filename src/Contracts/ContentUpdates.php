@@ -91,4 +91,13 @@ interface ContentUpdates
     public function performFileUpdate(ParsedFile $file, string &$status): ContentModel;
 
     public function getFile(string $path, bool $absolutePath = false);
+
+    /**
+     * Parses the provided file, decoding content and front matter
+     *
+     * @param string $path  The path of the file to load.
+
+     * @return ParsedFile   The parsed file
+     */
+    public function parseFile(string $path, bool $absolutePath = false): ParsedFile;
 }

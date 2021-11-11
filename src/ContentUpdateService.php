@@ -174,15 +174,11 @@ class ContentUpdateService implements ContentUpdates
     }
 
     /**
-     * Parses the provided file, decoding content and front matter
-     *
-     * @param string $path  The path of the file to load.
-
-     * @return ParsedFile   The parsed file
+     * @inheritDoc
      */
-    public function parseFile(string $path): ParsedFile
+    public function parseFile(string $path, bool $absolutePath = false): ParsedFile
     {
-        return ParsedFile::load($path);
+        return ParsedFile::load($path, $absolutePath);
     }
 
     public function seed(string $modelClass, $files): FileSeeder
